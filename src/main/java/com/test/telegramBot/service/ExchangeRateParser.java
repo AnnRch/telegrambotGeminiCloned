@@ -1,4 +1,4 @@
-package com.test.telegramBot;
+package com.test.telegramBot.service;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -42,7 +42,8 @@ public class ExchangeRateParser {
 
     @Scheduled(fixedRate = 120000) // Запуск каждые 2 минуты
     public void sendExchangeRatesToChat() {
-        long chatId = 362122858;
+//        long chatId = 362122858;
+        long chatId = 7272362800L;
         logger.info("Запуск отправки курса валют в чат: {}", chatId);
 
         String exchangeRates = getExchangeRates();

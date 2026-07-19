@@ -1,4 +1,4 @@
-package com.test.telegramBot;
+package com.test.telegramBot.service;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -79,7 +79,8 @@ public class HolidaysParser {
 
     @Scheduled(fixedRate = 120000)
     public void sendHolidaysToChat() {
-        long chatId = 362122858;
+//        long chatId = 362122858;
+        long chatId = 7272362800L;
         logger.info("Запуск отправки праздников в чат: {}", chatId);
 
         List<String> holidays = getHolidays();
